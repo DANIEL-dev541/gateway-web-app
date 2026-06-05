@@ -1,12 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
-
 export default function HomePage() {
-  useEffect(() => {
-    // Animation ready
-  }, []);
-
   return (
     <div style={{background: '#F8F9FC', minHeight: '100vh', padding: '0'}}>
       <header style={{background: 'white', padding: '1.2rem 2rem', boxShadow: '0 2px 12px rgba(0,0,0,0.06)', position: 'sticky', top: 0, zIndex: 100}}>
@@ -31,10 +25,10 @@ export default function HomePage() {
           </div>
 
           <nav style={{display: 'flex', gap: '2rem'}}>
-            <a href="/" style={{fontWeight: 600, color: '#0A2463', textDecoration: 'none', fontSize: '1.05rem', transition: 'all 0.3s'}} onMouseOver={e => e.target.style.transform = 'translateY(-2px)'} onMouseOut={e => e.target.style.transform = 'translateY(0)'}>Home</a>
-            <a href="/about" style={{fontWeight: 600, color: '#475569', textDecoration: 'none', fontSize: '1.05rem', transition: 'all 0.3s'}} onMouseOver={e => e.target.style.transform = 'translateY(-2px)'} onMouseOut={e => e.target.style.transform = 'translateY(0)'}>About</a>
-            <a href="/services" style={{fontWeight: 600, color: '#475569', textDecoration: 'none', fontSize: '1.05rem', transition: 'all 0.3s'}} onMouseOver={e => e.target.style.transform = 'translateY(-2px)'} onMouseOut={e => e.target.style.transform = 'translateY(0)'}>Services</a>
-            <a href="/contact" style={{fontWeight: 600, color: '#475569', textDecoration: 'none', fontSize: '1.05rem', transition: 'all 0.3s'}} onMouseOver={e => e.target.style.transform = 'translateY(-2px)'} onMouseOut={e => e.target.style.transform = 'translateY(0)'}>Contact</a>
+            <a href="/" style={{fontWeight: 600, color: '#0A2463', textDecoration: 'none', fontSize: '1.05rem', transition: 'all 0.3s'}} onMouseOver={(e) => {e.currentTarget.style.transform = 'translateY(-2px)'}} onMouseOut={(e) => {e.currentTarget.style.transform = 'translateY(0)'}}>Home</a>
+            <a href="/about" style={{fontWeight: 600, color: '#475569', textDecoration: 'none', fontSize: '1.05rem', transition: 'all 0.3s'}} onMouseOver={(e) => {e.currentTarget.style.transform = 'translateY(-2px)'}} onMouseOut={(e) => {e.currentTarget.style.transform = 'translateY(0)'}}>About</a>
+            <a href="/services" style={{fontWeight: 600, color: '#475569', textDecoration: 'none', fontSize: '1.05rem', transition: 'all 0.3s'}} onMouseOver={(e) => {e.currentTarget.style.transform = 'translateY(-2px)'}} onMouseOut={(e) => {e.currentTarget.style.transform = 'translateY(0)'}}>Services</a>
+            <a href="/contact" style={{fontWeight: 600, color: '#475569', textDecoration: 'none', fontSize: '1.05rem', transition: 'all 0.3s'}} onMouseOver={(e) => {e.currentTarget.style.transform = 'translateY(-2px)'}} onMouseOut={(e) => {e.currentTarget.style.transform = 'translateY(0)'}}>Contact</a>
           </nav>
 
         </div>
@@ -62,10 +56,10 @@ export default function HomePage() {
               Full-Stack Experts | Premium Websites & Mobile Apps | Nairobi, Kenya
             </p>
             <div style={{display: 'flex', gap: '1rem', flexWrap: 'wrap'}}>
-              <a href="/services" style={{background: '#0A2463', color: 'white', padding: '0.875rem 2rem', borderRadius: '8px', textDecoration: 'none', fontWeight: 600, transition: 'all 0.3s ease'}} onMouseOver={e => {e.target.style.transform = 'scale(1.05)'; e.target.style.boxShadow = '0 8px 20px rgba(10, 36, 99, 0.2)'}} onMouseOut={e => {e.target.style.transform = 'scale(1)'; e.target.style.boxShadow = 'none'}}>
+              <a href="/services" style={{background: '#0A2463', color: 'white', padding: '0.875rem 2rem', borderRadius: '8px', textDecoration: 'none', fontWeight: 600, transition: 'all 0.3s ease'}} onMouseOver={(e) => {e.currentTarget.style.transform = 'scale(1.05)'; e.currentTarget.style.boxShadow = '0 8px 20px rgba(10, 36, 99, 0.2)'}} onMouseOut={(e) => {e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.boxShadow = 'none'}}>
                 View Our Work
               </a>
-              <a href="/contact" style={{background: '#E9B824', color: '#1E1E2F', padding: '0.875rem 2rem', borderRadius: '8px', textDecoration: 'none', fontWeight: 600, transition: 'all 0.3s ease'}} onMouseOver={e => {e.target.style.transform = 'scale(1.05)'; e.target.style.boxShadow = '0 8px 20px rgba(233, 184, 36, 0.3)'}} onMouseOut={e => {e.target.style.transform = 'scale(1)'; e.target.style.boxShadow = 'none'}}>
+              <a href="/contact" style={{background: '#E9B824', color: '#1E1E2F', padding: '0.875rem 2rem', borderRadius: '8px', textDecoration: 'none', fontWeight: 600, transition: 'all 0.3s ease'}} onMouseOver={(e) => {e.currentTarget.style.transform = 'scale(1.05)'; e.currentTarget.style.boxShadow = '0 8px 20px rgba(233, 184, 36, 0.3)'}} onMouseOut={(e) => {e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.boxShadow = 'none'}}>
                 Start Your Project
               </a>
             </div>
@@ -105,8 +99,8 @@ export default function HomePage() {
                 animation: 'bounceBox 6s ease-in-out infinite',
                 transition: 'transform 0.3s'
               }}
-              onMouseOver={e => e.target.style.transform = 'translateY(-8px) scale(1.03)'}
-              onMouseOut={e => e.target.style.transform = 'translateY(0) scale(1)'}
+              onMouseOver={(e) => {e.currentTarget.style.transform = 'translateY(-8px) scale(1.03)'}}
+              onMouseOut={(e) => {e.currentTarget.style.transform = 'translateY(0) scale(1)'}}
             >
               <div style={{fontSize: '3rem', marginBottom: '1rem'}}>🌐</div>
               <h3 style={{fontWeight: 700, color: '#0A2463', marginBottom: '0.5rem'}}>Web Development</h3>
@@ -123,8 +117,8 @@ export default function HomePage() {
                 animation: 'bounceBox 6s ease-in-out 0.5s infinite',
                 transition: 'transform 0.3s'
               }}
-              onMouseOver={e => e.target.style.transform = 'translateY(-8px) scale(1.03)'}
-              onMouseOut={e => e.target.style.transform = 'translateY(0) scale(1)'}
+              onMouseOver={(e) => {e.currentTarget.style.transform = 'translateY(-8px) scale(1.03)'}}
+              onMouseOut={(e) => {e.currentTarget.style.transform = 'translateY(0) scale(1)'}}
             >
               <div style={{fontSize: '3rem', marginBottom: '1rem'}}>📱</div>
               <h3 style={{fontWeight: 700, color: '#0A2463', marginBottom: '0.5rem'}}>Mobile Apps</h3>
@@ -141,8 +135,8 @@ export default function HomePage() {
                 animation: 'bounceBox 6s ease-in-out 1s infinite',
                 transition: 'transform 0.3s'
               }}
-              onMouseOver={e => e.target.style.transform = 'translateY(-8px) scale(1.03)'}
-              onMouseOut={e => e.target.style.transform = 'translateY(0) scale(1)'}
+              onMouseOver={(e) => {e.currentTarget.style.transform = 'translateY(-8px) scale(1.03)'}}
+              onMouseOut={(e) => {e.currentTarget.style.transform = 'translateY(0) scale(1)'}}
             >
               <div style={{fontSize: '3rem', marginBottom: '1rem'}}>⚙️</div>
               <h3 style={{fontWeight: 700, color: '#0A2463', marginBottom: '0.5rem'}}>Custom Systems</h3>
@@ -180,7 +174,7 @@ export default function HomePage() {
           </div>
           <br />
 
-          <a href="/contact" style={{background: '#E9B824', color: '#1E1E2F', padding: '1rem 2.5rem', borderRadius: '8px', textDecoration: 'none', fontWeight: 700, fontSize: '1.1rem', display: 'inline-block', transition: 'all 0.3s'}} onMouseOver={e => {e.target.style.transform = 'scale(1.08)'; e.target.style.boxShadow = '0 10px 25px rgba(233, 184, 36, 0.4)'}} onMouseOut={e => {e.target.style.transform = 'scale(1)'; e.target.style.boxShadow = 'none'}}>
+          <a href="/contact" style={{background: '#E9B824', color: '#1E1E2F', padding: '1rem 2.5rem', borderRadius: '8px', textDecoration: 'none', fontWeight: 700, fontSize: '1.1rem', display: 'inline-block', transition: 'all 0.3s'}} onMouseOver={(e) => {e.currentTarget.style.transform = 'scale(1.08)'; e.currentTarget.style.boxShadow = '0 10px 25px rgba(233, 184, 36, 0.4)'}} onMouseOut={(e) => {e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.boxShadow = 'none'}}>
             Contact Me Today
           </a>
         </div>
@@ -188,7 +182,8 @@ export default function HomePage() {
       </div>
 
 
-      <style jsx global>{`
+      {/* ✅ ANIMATIONS ADDED SAFELY — NO ERRORS */}
+      <style dangerouslySetInnerHTML={{ __html: `
         @keyframes floatLogo {
           0% { transform: translateY(0); }
           50% { transform: translateY(-5px); }
@@ -205,7 +200,7 @@ export default function HomePage() {
           100% { filter: brightness(1.15); }
         }
         @keyframes bounceBox {
-          0% { transform: translateY(0); }
+          0% { transform: translateY(0; }
           50% { transform: translateY(-4px); }
           100% { transform: translateY(0); }
         }
@@ -222,7 +217,7 @@ export default function HomePage() {
           50% { transform: translateX(0) rotate(0); }
           100% { transform: translateX(0) rotate(0); }
         }
-      `}</style>
+      `}} />
 
     </div>
   );
