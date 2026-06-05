@@ -2,8 +2,36 @@
 
 export default function HomePage() {
   return (
-    <div style={{background: '#F8F9FC', minHeight: '100vh', padding: '4rem 0'}}>
-      <div className="container">
+    <div style={{background: '#F8F9FC', minHeight: '100vh', padding: '0'}}>
+      {/* HEADER WITH LOGO */}
+      <header style={{background: 'white', padding: '1rem 2rem', boxShadow: '0 2px 12px rgba(0,0,0,0.06)', position: 'sticky', top: 0, zIndex: 100}}>
+        <div style={{maxWidth: '1200px', margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
+          
+          {/* ✅ YOUR NEW LOGO HERE */}
+          <div style={{display: 'flex', alignItems: 'center', gap: '0.75rem'}}>
+            <img 
+              src="/logo.png" 
+              alt="Gateway Dan - Logo"
+              style={{height: '45px', width: 'auto'}}
+            />
+            <span style={{fontSize: '1.25rem', fontWeight: 800, color: '#0A2463', letterSpacing: '-0.5px'}}>
+              Gateway Dan
+            </span>
+          </div>
+
+          {/* NAVIGATION */}
+          <nav style={{display: 'flex', gap: '2rem'}}>
+            <a href="/" style={{fontWeight: 600, color: '#0A2463', textDecoration: 'none'}}>Home</a>
+            <a href="/about" style={{fontWeight: 600, color: '#475569', textDecoration: 'none'}}>About</a>
+            <a href="/services" style={{fontWeight: 600, color: '#475569', textDecoration: 'none'}}>Services</a>
+            <a href="/contact" style={{fontWeight: 600, color: '#475569', textDecoration: 'none'}}>Contact</a>
+          </nav>
+
+        </div>
+      </header>
+
+
+      <div className="container" style={{padding: '4rem 2rem', maxWidth: '1200px', margin: '0 auto'}}>
 
         {/* HERO SECTION */}
         <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'center', marginBottom: '5rem'}}>
@@ -25,19 +53,10 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* ✅ YOUR PHOTO HERE */}
-          <div>
-            <img 
-              src="/profile.png" 
-              alt="Daniel - Gateway Web & App Development"
-              style={{
-                width: '100%',
-                height: 'auto',
-                borderRadius: '12px',
-                boxShadow: '0 12px 40px rgba(10, 36, 99, 0.15)',
-                display: 'block'
-              }}
-            />
+          {/* NO IMAGE HERE — LOGO ONLY IN HEADER ✅ */}
+          <div style={{background: 'linear-gradient(135deg, #0A2463, #3E92CC, #E9B824)', borderRadius: '12px', padding: '4rem 2rem', textAlign: 'center', color: 'white', boxShadow: '0 12px 40px rgba(10, 36, 99, 0.15)'}}>
+            <h2 style={{fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem'}}>Building Digital Solutions That Grow Your Business</h2>
+            <p style={{opacity: 0.9}}>Trusted across Kenya — modern, fast, secure, scalable.</p>
           </div>
 
         </div>

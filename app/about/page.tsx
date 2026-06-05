@@ -2,8 +2,8 @@
 
 export default function AboutPage() {
   return (
-    <div style={{background: '#F8F9FC', minHeight: '100vh', padding: '4rem 0'}}>
-      <div className="container">
+    <div style={{background: '#F8F9FC', minHeight: '100vh', padding: '4rem 2rem'}}>
+      <div className="container" style={{maxWidth: '1200px', margin: '0 auto'}}>
 
         <div style={{textAlign: 'center', marginBottom: '4rem'}}>
           <h1 style={{fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 800, color: '#0A2463', marginBottom: '1rem'}}>
@@ -17,7 +17,7 @@ export default function AboutPage() {
 
         <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '3rem', alignItems: 'center', background: 'white', borderRadius: '16px', padding: '2rem', boxShadow: '0 8px 32px rgba(10, 36, 99, 0.1)'}}>
           
-          {/* ✅ YOUR PHOTO HERE */}
+          {/* ✅ ONLY YOUR PHOTO HERE — NO LOGO */}
           <div style={{position: 'relative'}}>
             <div style={{position: 'absolute', inset: '-8px', background: 'linear-gradient(135deg, #0A2463, #3E92CC, #E9B824)', borderRadius: '12px', filter: 'blur(12px)', opacity: 0.4}}></div>
             <img 
