@@ -1,13 +1,17 @@
 "use client";
 
+import { useEffect } from "react";
+
 export default function HomePage() {
+  useEffect(() => {
+    // Animation ready
+  }, []);
+
   return (
     <div style={{background: '#F8F9FC', minHeight: '100vh', padding: '0'}}>
-      {/* HEADER WITH BIGGER LOGO + SOFT HOVER EFFECT */}
       <header style={{background: 'white', padding: '1.2rem 2rem', boxShadow: '0 2px 12px rgba(0,0,0,0.06)', position: 'sticky', top: 0, zIndex: 100}}>
         <div style={{maxWidth: '1200px', margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
           
-          {/* ✅ BIG LOGO + GENTLE FLOAT ANIMATION */}
           <div 
             style={{
               display: 'flex', 
@@ -26,7 +30,6 @@ export default function HomePage() {
             </span>
           </div>
 
-          {/* NAVIGATION */}
           <nav style={{display: 'flex', gap: '2rem'}}>
             <a href="/" style={{fontWeight: 600, color: '#0A2463', textDecoration: 'none', fontSize: '1.05rem', transition: 'all 0.3s'}} onMouseOver={e => e.target.style.transform = 'translateY(-2px)'} onMouseOut={e => e.target.style.transform = 'translateY(0)'}>Home</a>
             <a href="/about" style={{fontWeight: 600, color: '#475569', textDecoration: 'none', fontSize: '1.05rem', transition: 'all 0.3s'}} onMouseOver={e => e.target.style.transform = 'translateY(-2px)'} onMouseOut={e => e.target.style.transform = 'translateY(0)'}>About</a>
@@ -40,7 +43,6 @@ export default function HomePage() {
 
       <div className="container" style={{padding: '4rem 2rem', maxWidth: '1200px', margin: '0 auto'}}>
 
-        {/* HERO SECTION — CONTAINER SHAKES SLIGHTLY */}
         <div 
           style={{
             display: 'grid', 
@@ -87,7 +89,6 @@ export default function HomePage() {
         </div>
 
 
-        {/* SERVICES — EACH BOX BOUNCES SLIGHTLY */}
         <div style={{marginBottom: '5rem'}}>
           <h2 style={{textAlign: 'center', fontSize: '2rem', fontWeight: 700, color: '#0A2463', marginBottom: '3rem'}}>
             What We Offer
@@ -152,7 +153,6 @@ export default function HomePage() {
         </div>
 
 
-        {/* CTA — EMAIL SHAKES HERE ✅✅✅ */}
         <div 
           style={{
             background: 'linear-gradient(135deg, #0A2463, #3E92CC)', 
@@ -166,7 +166,6 @@ export default function HomePage() {
           <h2 style={{fontSize: '2rem', fontWeight: 700, marginBottom: '1rem'}}>Ready to Build Your Dream Project?</h2>
           <p style={{maxWidth: '600px', margin: '0 auto 1rem auto', opacity: 0.9}}>We deliver high-quality, secure and scalable solutions — trusted by businesses across Kenya.</p>
           
-          {/* ✅ EMAIL THAT SHAKES CONTINUOUSLY + BOUNCES ON HOVER */}
           <div 
             style={{
               fontSize: '1.2rem', 
@@ -189,7 +188,6 @@ export default function HomePage() {
       </div>
 
 
-      {/* ✅ ALL ANIMATION STYLES — ADDED HERE */}
       <style jsx global>{`
         @keyframes floatLogo {
           0% { transform: translateY(0); }
@@ -215,7 +213,6 @@ export default function HomePage() {
           0% { box-shadow: 0 0 20px rgba(10, 36, 99, 0.3); }
           100% { box-shadow: 0 0 35px rgba(62, 146, 204, 0.5); }
         }
-        /* ✅ THIS IS THE EMAIL SHAKE YOU WANT */
         @keyframes shakeEmail {
           0% { transform: translateX(0) rotate(0); }
           10% { transform: translateX(-2px) rotate(-1deg); }

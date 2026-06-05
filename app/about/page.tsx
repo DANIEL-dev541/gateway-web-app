@@ -1,6 +1,12 @@
 "use client";
 
+import { useEffect } from "react";
+
 export default function AboutPage() {
+  useEffect(() => {
+    // Animation ready
+  }, []);
+
   return (
     <div style={{background: '#F8F9FC', minHeight: '100vh', padding: '4rem 2rem'}}>
       <div className="container" style={{maxWidth: '1200px', margin: '0 auto'}}>
@@ -29,7 +35,6 @@ export default function AboutPage() {
           }}
         >
           
-          {/* ✅ ONLY YOUR PHOTO HERE — ALSO FLOATING SLIGHTLY */}
           <div style={{position: 'relative', animation: 'gentleRock 5s ease-in-out infinite'}}>
             <div style={{position: 'absolute', inset: '-8px', background: 'linear-gradient(135deg, #0A2463, #3E92CC, #E9B824)', borderRadius: '12px', filter: 'blur(12px)', opacity: 0.4}}></div>
             <img 
@@ -88,7 +93,6 @@ export default function AboutPage() {
         </div>
 
 
-        {/* SKILLS SECTION — BOXES BOUNCE */}
         <div style={{marginTop: '5rem'}}>
           <div style={{textAlign: 'center', marginBottom: '3rem'}}>
             <h2 style={{fontSize: '1.8rem', fontWeight: 700, color: '#0A2463'}}>My Full Stack Skills & Technologies</h2>
@@ -140,7 +144,6 @@ export default function AboutPage() {
       </div>
 
 
-      {/* ✅ ANIMATIONS FOR ABOUT PAGE */}
       <style jsx global>{`
         @keyframes fadeIn {
           from { opacity: 0; transform: translateY(10px); }
