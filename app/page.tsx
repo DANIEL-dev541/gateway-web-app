@@ -1,221 +1,172 @@
 "use client";
 
-export default function HomePage() {
+import { useEffect } from "react";
+
+export default function AboutPage() {
+  useEffect(() => {
+    // Animation ready
+  }, []);
+
   return (
-    <div style={{background: '#F8F9FC', minHeight: '100vh', padding: '0'}}>
-      <header style={{background: 'white', padding: '1.2rem 2rem', boxShadow: '0 2px 12px rgba(0,0,0,0.06)', position: 'sticky', top: 0, zIndex: 100}}>
-        <div style={{maxWidth: '1200px', margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
-          
-          <div 
-            style={{
-              display: 'flex', 
-              alignItems: 'center', 
-              gap: '1rem',
-              animation: 'floatLogo 3s ease-in-out infinite'
-            }}
-          >
-            <img 
-              src="/logo.png" 
-              alt="Gateway Dan - Logo"
-              style={{height: '70px', width: 'auto'}}
-            />
-            <span style={{fontSize: '1.4rem', fontWeight: 800, color: '#0A2463', letterSpacing: '-0.5px'}}>
-              Gateway Dan
-            </span>
-          </div>
+    <div style={{background: '#F8F9FC', minHeight: '100vh', padding: '4rem 2rem'}}>
+      <div className="container" style={{maxWidth: '1200px', margin: '0 auto'}}>
 
-          <nav style={{display: 'flex', gap: '2rem'}}>
-            <a href="/" style={{fontWeight: 600, color: '#0A2463', textDecoration: 'none', fontSize: '1.05rem', transition: 'all 0.3s'}} onMouseOver={(e) => {e.currentTarget.style.transform = 'translateY(-2px)'}} onMouseOut={(e) => {e.currentTarget.style.transform = 'translateY(0)'}}>Home</a>
-            <a href="/about" style={{fontWeight: 600, color: '#475569', textDecoration: 'none', fontSize: '1.05rem', transition: 'all 0.3s'}} onMouseOver={(e) => {e.currentTarget.style.transform = 'translateY(-2px)'}} onMouseOut={(e) => {e.currentTarget.style.transform = 'translateY(0)'}}>About</a>
-            <a href="/services" style={{fontWeight: 600, color: '#475569', textDecoration: 'none', fontSize: '1.05rem', transition: 'all 0.3s'}} onMouseOver={(e) => {e.currentTarget.style.transform = 'translateY(-2px)'}} onMouseOut={(e) => {e.currentTarget.style.transform = 'translateY(0)'}}>Services</a>
-            <a href="/contact" style={{fontWeight: 600, color: '#475569', textDecoration: 'none', fontSize: '1.05rem', transition: 'all 0.3s'}} onMouseOver={(e) => {e.currentTarget.style.transform = 'translateY(-2px)'}} onMouseOut={(e) => {e.currentTarget.style.transform = 'translateY(0)'}}>Contact</a>
-          </nav>
-
+        <div style={{textAlign: 'center', marginBottom: '4rem', animation: 'fadeIn 1s ease'}}>
+          <h1 style={{fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 800, color: '#0A2463', marginBottom: '1rem'}}>
+            About Gateway Web & App Development
+          </h1>
+          <p style={{fontSize: '1.125rem', color: '#64748b', maxWidth: '700px', margin: '0 auto'}}>
+            Professional Full-Stack Developer | Certified IT Expert | Based in Nairobi, Kenya
+          </p>
         </div>
-      </header>
 
-
-      <div className="container" style={{padding: '4rem 2rem', maxWidth: '1200px', margin: '0 auto'}}>
 
         <div 
           style={{
             display: 'grid', 
-            gridTemplateColumns: '1fr 1fr', 
+            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', 
             gap: '3rem', 
             alignItems: 'center', 
-            marginBottom: '5rem',
-            animation: 'softShake 8s ease-in-out infinite'
+            background: 'white', 
+            borderRadius: '16px', 
+            padding: '2rem', 
+            boxShadow: '0 8px 32px rgba(10, 36, 99, 0.1)',
+            animation: 'floatUp 4s ease-in-out infinite alternate'
           }}
         >
           
-          <div>
-            <h1 style={{fontSize: 'clamp(2rem, 4vw, 3.5rem)', fontWeight: 800, color: '#0A2463', lineHeight: '1.2', marginBottom: '1.5rem'}}>
-              Gateway Web & App Development
-            </h1>
-            <p style={{fontSize: '1.125rem', color: '#64748b', marginBottom: '2rem'}}>
-              Full-Stack Experts | Premium Websites & Mobile Apps | Nairobi, Kenya
+          <div style={{position: 'relative', animation: 'gentleRock 5s ease-in-out infinite'}}>
+            <div style={{position: 'absolute', inset: '-8px', background: 'linear-gradient(135deg, #0A2463, #3E92CC, #E9B824)', borderRadius: '12px', filter: 'blur(12px)', opacity: 0.4}}></div>
+            <img 
+              src="/profile.png" 
+              alt="Daniel - Full Stack Developer"
+              style={{
+                position: 'relative',
+                width: '100%',
+                height: 'auto',
+                borderRadius: '8px',
+                border: '6px solid white',
+                display: 'block'
+              }}
+            />
+          </div>
+
+
+          <div style={{color: '#1E1E2F'}}>
+            <h2 style={{fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem', color: '#0A2463'}}>
+              Hi, I'm Daniel — Your Trusted Tech Partner
+            </h2>
+
+            <p style={{fontSize: '1rem', lineHeight: '1.7', marginBottom: '1.5rem', color: '#475569'}}>
+              I am a fully qualified IT professional holding a <strong style={{color: '#0A2463'}}>Higher Diploma in Information Technology</strong> from Tindiret Technical & Vocational College. With years of hands-on experience, I specialize in building high-performance, secure and scalable digital solutions.
             </p>
+
+            <p style={{fontSize: '1rem', lineHeight: '1.7', marginBottom: '2rem', color: '#475569'}}>
+              I don't just write code — I build solutions that grow your business. From simple websites to complex enterprise systems and mobile apps, I handle every layer: <strong>Frontend, Backend, Databases, Security & Hosting</strong>.
+            </p>
+
+
+            <div 
+              style={{
+                background: 'rgba(10, 36, 99, 0.08)', 
+                padding: '1rem 1.5rem', 
+                borderRadius: '8px', 
+                borderLeft: '4px solid #E9B824', 
+                marginBottom: '2rem',
+                animation: 'pulseBorder 2s ease-in-out infinite alternate'
+              }}
+            >
+              <p style={{fontWeight: 600, color: '#0A2463', margin: 0}}>🎓 Certified Higher Diploma IT Professional</p>
+              <p style={{fontSize: '0.875rem', color: '#475569', margin: '0.25rem 0 0 0'}}>Proven academic & practical expertise — international standards</p>
+            </div>
+
+
             <div style={{display: 'flex', gap: '1rem', flexWrap: 'wrap'}}>
-              <a href="/services" style={{background: '#0A2463', color: 'white', padding: '0.875rem 2rem', borderRadius: '8px', textDecoration: 'none', fontWeight: 600, transition: 'all 0.3s ease'}} onMouseOver={(e) => {e.currentTarget.style.transform = 'scale(1.05)'; e.currentTarget.style.boxShadow = '0 8px 20px rgba(10, 36, 99, 0.2)'}} onMouseOut={(e) => {e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.boxShadow = 'none'}}>
-                View Our Work
-              </a>
-              <a href="/contact" style={{background: '#E9B824', color: '#1E1E2F', padding: '0.875rem 2rem', borderRadius: '8px', textDecoration: 'none', fontWeight: 600, transition: 'all 0.3s ease'}} onMouseOver={(e) => {e.currentTarget.style.transform = 'scale(1.05)'; e.currentTarget.style.boxShadow = '0 8px 20px rgba(233, 184, 36, 0.3)'}} onMouseOut={(e) => {e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.boxShadow = 'none'}}>
+              <a href="/contact" style={{background: '#0A2463', color: 'white', padding: '0.875rem 2rem', borderRadius: '8px', textDecoration: 'none', fontWeight: 600, transition: 'all 0.3s'}} onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'} onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}>
                 Start Your Project
               </a>
+              <a href="/services" style={{background: '#E9B824', color: '#1E1E2F', padding: '0.875rem 2rem', borderRadius: '8px', textDecoration: 'none', fontWeight: 600, transition: 'all 0.3s'}} onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'} onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}>
+                View Services
+              </a>
             </div>
           </div>
-
-          <div 
-            style={{
-              background: 'linear-gradient(135deg, #0A2463, #3E92CC, #E9B824)', 
-              borderRadius: '12px', 
-              padding: '4rem 2rem', 
-              textAlign: 'center', 
-              color: 'white', 
-              boxShadow: '0 12px 40px rgba(10, 36, 99, 0.15)',
-              animation: 'pulseColor 4s ease-in-out infinite alternate'
-            }}
-          >
-            <h2 style={{fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem'}}>Building Digital Solutions That Grow Your Business</h2>
-            <p style={{opacity: 0.9}}>Trusted across Kenya — modern, fast, secure, scalable.</p>
-          </div>
-
         </div>
 
 
-        <div style={{marginBottom: '5rem'}}>
-          <h2 style={{textAlign: 'center', fontSize: '2rem', fontWeight: 700, color: '#0A2463', marginBottom: '3rem'}}>
-            What We Offer
-          </h2>
-          <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem'}}>
+        <div style={{marginTop: '5rem'}}>
+          <div style={{textAlign: 'center', marginBottom: '3rem'}}>
+            <h2 style={{fontSize: '1.8rem', fontWeight: 700, color: '#0A2463'}}>My Full Stack Skills & Technologies</h2>
+            <p style={{color: '#64748b'}}>Mastered every tool needed to build powerful solutions</p>
+          </div>
+
+
+          <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '1.25rem'}}>
             
-            <div 
-              style={{
-                background: 'white', 
-                padding: '2rem', 
-                borderRadius: '12px', 
-                boxShadow: '0 4px 16px rgba(0,0,0,0.08)', 
-                textAlign: 'center',
-                animation: 'bounceBox 6s ease-in-out infinite',
-                transition: 'transform 0.3s'
-              }}
-              onMouseOver={(e) => {e.currentTarget.style.transform = 'translateY(-8px) scale(1.03)'}}
-              onMouseOut={(e) => {e.currentTarget.style.transform = 'translateY(0) scale(1)'}}
-            >
-              <div style={{fontSize: '3rem', marginBottom: '1rem'}}>🌐</div>
-              <h3 style={{fontWeight: 700, color: '#0A2463', marginBottom: '0.5rem'}}>Web Development</h3>
-              <p style={{color: '#64748b'}}>Fast, modern & mobile-friendly websites & systems</p>
-            </div>
-
-            <div 
-              style={{
-                background: 'white', 
-                padding: '2rem', 
-                borderRadius: '12px', 
-                boxShadow: '0 4px 16px rgba(0,0,0,0.08)', 
-                textAlign: 'center',
-                animation: 'bounceBox 6s ease-in-out 0.5s infinite',
-                transition: 'transform 0.3s'
-              }}
-              onMouseOver={(e) => {e.currentTarget.style.transform = 'translateY(-8px) scale(1.03)'}}
-              onMouseOut={(e) => {e.currentTarget.style.transform = 'translateY(0) scale(1)'}}
-            >
-              <div style={{fontSize: '3rem', marginBottom: '1rem'}}>📱</div>
-              <h3 style={{fontWeight: 700, color: '#0A2463', marginBottom: '0.5rem'}}>Mobile Apps</h3>
-              <p style={{color: '#64748b'}}>Cross-platform Android & iOS applications</p>
-            </div>
-
-            <div 
-              style={{
-                background: 'white', 
-                padding: '2rem', 
-                borderRadius: '12px', 
-                boxShadow: '0 4px 16px rgba(0,0,0,0.08)', 
-                textAlign: 'center',
-                animation: 'bounceBox 6s ease-in-out 1s infinite',
-                transition: 'transform 0.3s'
-              }}
-              onMouseOver={(e) => {e.currentTarget.style.transform = 'translateY(-8px) scale(1.03)'}}
-              onMouseOut={(e) => {e.currentTarget.style.transform = 'translateY(0) scale(1)'}}
-            >
-              <div style={{fontSize: '3rem', marginBottom: '1rem'}}>⚙️</div>
-              <h3 style={{fontWeight: 700, color: '#0A2463', marginBottom: '0.5rem'}}>Custom Systems</h3>
-              <p style={{color: '#64748b'}}>Databases, APIs & full business automation</p>
-            </div>
+            {[
+              {name: 'React.js', icon: '⚛️'},
+              {name: 'Next.js', icon: '▲'},
+              {name: 'Flutter', icon: '📱'},
+              {name: 'Node.js', icon: '🟢'},
+              {name: 'PHP', icon: '🐘'},
+              {name: 'Python', icon: '🐍'},
+              {name: 'SQL / MySQL', icon: '🗄️'},
+              {name: 'MongoDB', icon: '🍃'},
+              {name: 'HTML5 / CSS3', icon: '🎨'},
+              {name: 'JavaScript / TS', icon: '📜'},
+              {name: 'REST APIs', icon: '🔌'},
+              {name: 'Git / GitHub', icon: '🐙'},
+              {name: 'UI/UX Design', icon: '✨'},
+              {name: 'Cloud / Hosting', icon: '☁️'},
+              {name: 'Cybersecurity', icon: '🔒'}
+            ].map((skill, i) => (
+              <div 
+                key={i} 
+                style={{
+                  background: 'white', 
+                  padding: '1.25rem', 
+                  borderRadius: '8px', 
+                  boxShadow: '0 4px 12px rgba(0,0,0,0.05)', 
+                  textAlign: 'center',
+                  animation: 'bounceSkill 5s ease-in-out ' + (i * 0.15) + 's infinite',
+                  transition: 'all 0.3s'
+                }}
+                onMouseOver={(e) => {e.currentTarget.style.transform = 'translateY(-6px)'; e.currentTarget.style.boxShadow = '0 8px 20px rgba(10, 36, 99, 0.12)'}}
+                onMouseOut={(e) => {e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.05)'}}
+              >
+                <div style={{fontSize: '2rem', marginBottom: '0.5rem'}}>{skill.icon}</div>
+                <div style={{fontWeight: 600, color: '#1E1E2F'}}>{skill.name}</div>
+              </div>
+            ))}
 
           </div>
-        </div>
-
-
-        <div 
-          style={{
-            background: 'linear-gradient(135deg, #0A2463, #3E92CC)', 
-            color: 'white', 
-            padding: '4rem 2rem', 
-            borderRadius: '16px', 
-            textAlign: 'center',
-            animation: 'glowPulse 3s ease-in-out infinite alternate'
-          }}
-        >
-          <h2 style={{fontSize: '2rem', fontWeight: 700, marginBottom: '1rem'}}>Ready to Build Your Dream Project?</h2>
-          <p style={{maxWidth: '600px', margin: '0 auto 1rem auto', opacity: 0.9}}>We deliver high-quality, secure and scalable solutions — trusted by businesses across Kenya.</p>
-          
-          <div 
-            style={{
-              fontSize: '1.2rem', 
-              fontWeight: 600, 
-              marginBottom: '1.5rem', 
-              color: '#E9B824',
-              display: 'inline-block',
-              animation: 'shakeEmail 2.5s ease-in-out infinite'
-            }}
-          >
-            📧 info@gatewayweb.co.ke
-          </div>
-          <br />
-
-          <a href="/contact" style={{background: '#E9B824', color: '#1E1E2F', padding: '1rem 2.5rem', borderRadius: '8px', textDecoration: 'none', fontWeight: 700, fontSize: '1.1rem', display: 'inline-block', transition: 'all 0.3s'}} onMouseOver={(e) => {e.currentTarget.style.transform = 'scale(1.08)'; e.currentTarget.style.boxShadow = '0 10px 25px rgba(233, 184, 36, 0.4)'}} onMouseOut={(e) => {e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.boxShadow = 'none'}}>
-            Contact Me Today
-          </a>
         </div>
 
       </div>
 
 
-      {/* ✅ ANIMATIONS ADDED SAFELY — NO ERRORS */}
       <style dangerouslySetInnerHTML={{ __html: `
-        @keyframes floatLogo {
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(10px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes floatUp {
           0% { transform: translateY(0); }
-          50% { transform: translateY(-5px); }
+          100% { transform: translateY(-6px); }
+        }
+        @keyframes gentleRock {
+          0% { transform: rotate(0deg); }
+          25% { transform: rotate(0.3deg); }
+          75% { transform: rotate(-0.3deg); }
+          100% { transform: rotate(0deg); }
+        }
+        @keyframes pulseBorder {
+          0% { border-left-color: #E9B824; }
+          100% { border-left-color: #f2c94c; }
+        }
+        @keyframes bounceSkill {
+          0% { transform: translateY(0); }
+          50% { transform: translateY(-3px); }
           100% { transform: translateY(0); }
-        }
-        @keyframes softShake {
-          0% { transform: translateX(0); }
-          25% { transform: translateX(2px); }
-          75% { transform: translateX(-2px); }
-          100% { transform: translateX(0); }
-        }
-        @keyframes pulseColor {
-          0% { filter: brightness(1); }
-          100% { filter: brightness(1.15); }
-        }
-        @keyframes bounceBox {
-          0% { transform: translateY(0; }
-          50% { transform: translateY(-4px); }
-          100% { transform: translateY(0); }
-        }
-        @keyframes glowPulse {
-          0% { box-shadow: 0 0 20px rgba(10, 36, 99, 0.3); }
-          100% { box-shadow: 0 0 35px rgba(62, 146, 204, 0.5); }
-        }
-        @keyframes shakeEmail {
-          0% { transform: translateX(0) rotate(0); }
-          10% { transform: translateX(-2px) rotate(-1deg); }
-          20% { transform: translateX(2px) rotate(1deg); }
-          30% { transform: translateX(-2px) rotate(-1deg); }
-          40% { transform: translateX(2px) rotate(1deg); }
-          50% { transform: translateX(0) rotate(0); }
-          100% { transform: translateX(0) rotate(0); }
         }
       `}} />
 

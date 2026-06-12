@@ -1,6 +1,12 @@
 "use client";
 
+import { useEffect } from "react";
+
 export default function AboutPage() {
+  useEffect(() => {
+    // Animation ready
+  }, []);
+
   return (
     <div style={{background: '#F8F9FC', minHeight: '100vh', padding: '4rem 2rem'}}>
       <div className="container" style={{maxWidth: '1200px', margin: '0 auto'}}>
@@ -76,10 +82,10 @@ export default function AboutPage() {
 
 
             <div style={{display: 'flex', gap: '1rem', flexWrap: 'wrap'}}>
-              <a href="/contact" style={{background: '#0A2463', color: 'white', padding: '0.875rem 2rem', borderRadius: '8px', textDecoration: 'none', fontWeight: 600, transition: 'all 0.3s'}} onMouseOver={(e) => {e.currentTarget.style.transform = 'scale(1.05)'}} onMouseOut={(e) => {e.currentTarget.style.transform = 'scale(1)'}}>
+              <a href="/contact" style={{background: '#0A2463', color: 'white', padding: '0.875rem 2rem', borderRadius: '8px', textDecoration: 'none', fontWeight: 600, transition: 'all 0.3s'}} onMouseOver={e => e.target.style.transform = 'scale(1.05)'} onMouseOut={e => e.target.style.transform = 'scale(1)'}>
                 Start Your Project
               </a>
-              <a href="/services" style={{background: '#E9B824', color: '#1E1E2F', padding: '0.875rem 2rem', borderRadius: '8px', textDecoration: 'none', fontWeight: 600, transition: 'all 0.3s'}} onMouseOver={(e) => {e.currentTarget.style.transform = 'scale(1.05)'}} onMouseOut={(e) => {e.currentTarget.style.transform = 'scale(1)'}}>
+              <a href="/services" style={{background: '#E9B824', color: '#1E1E2F', padding: '0.875rem 2rem', borderRadius: '8px', textDecoration: 'none', fontWeight: 600, transition: 'all 0.3s'}} onMouseOver={e => e.target.style.transform = 'scale(1.05)'} onMouseOut={e => e.target.style.transform = 'scale(1)'}>
                 View Services
               </a>
             </div>
@@ -124,8 +130,8 @@ export default function AboutPage() {
                   animation: 'bounceSkill 5s ease-in-out ' + (i * 0.15) + 's infinite',
                   transition: 'all 0.3s'
                 }}
-                onMouseOver={(e) => {e.currentTarget.style.transform = 'translateY(-6px)'; e.currentTarget.style.boxShadow = '0 8px 20px rgba(10, 36, 99, 0.12)'}}
-                onMouseOut={(e) => {e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.05)'}}
+                onMouseOver={e => {e.target.style.transform = 'translateY(-6px)'; e.target.style.boxShadow = '0 8px 20px rgba(10, 36, 99, 0.12)'}}
+                onMouseOut={e => {e.target.style.transform = 'translateY(0)'; e.target.style.boxShadow = '0 4px 12px rgba(0,0,0,0.05)'}}
               >
                 <div style={{fontSize: '2rem', marginBottom: '0.5rem'}}>{skill.icon}</div>
                 <div style={{fontWeight: 600, color: '#1E1E2F'}}>{skill.name}</div>
@@ -138,8 +144,7 @@ export default function AboutPage() {
       </div>
 
 
-      {/* ✅ ANIMATIONS SAFE & CLEAN */}
-      <style dangerouslySetInnerHTML={{ __html: `
+      <style jsx global>{`
         @keyframes fadeIn {
           from { opacity: 0; transform: translateY(10px); }
           to { opacity: 1; transform: translateY(0); }
@@ -163,7 +168,7 @@ export default function AboutPage() {
           50% { transform: translateY(-3px); }
           100% { transform: translateY(0); }
         }
-      `}} />
+      `}</style>
 
     </div>
   );
