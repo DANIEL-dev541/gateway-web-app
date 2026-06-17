@@ -49,7 +49,7 @@ export default function HomePage() {
       </section>
 
 
-      {/* PORTFOLIO SECTION — 100% DEPLOYABLE */}
+      {/* PORTFOLIO SECTION — FULLY FIXED FOR VERCEL */}
       <section style={{backgroundColor: '#f8fbfd', padding: '60px 20px'}}>
         <div style={{maxWidth: '1200px', margin: '0 auto'}}>
           <h2 style={{textAlign: 'center', fontSize: '2rem', color: '#0a3d62', marginBottom: '50px', fontWeight: 'bold'}}>
@@ -58,65 +58,40 @@ export default function HomePage() {
 
           <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(500px, 1fr))', gap: '25px'}}>
             
-            {/* PROJECT 1 */}
             <div style={{background: 'white', padding: '25px 30px', borderRadius: '10px', boxShadow: '0 3px 10px rgba(0,0,0,0.07)', borderLeft: '4px solid #26ae60'}}>
               <h3 style={{fontSize: '1.15rem', color: '#2f3542', margin: '0 0 8px 0', fontWeight: 'bold'}}>🔹 Gateway Web App — Main Platform</h3>
               <p style={{color: '#57606f', margin: '0 0 10px 0', fontSize: '0.95rem'}}>Custom full‑stack business solution, responsive & secure, built for performance and scalability.</p>
-              <a 
-                href="https://gateway-web-app-chi.vercel.app" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                style={{color: '#26ae60', fontWeight: '600', textDecoration: 'none', fontSize: '0.9rem'}}
-              >
+              <a href="https://gateway-web-app-chi.vercel.app" target="_blank" rel="noopener noreferrer" style={{color: '#26ae60', fontWeight: '600', textDecoration: 'none', fontSize: '0.9rem'}}>
                 https://gateway-web-app-chi.vercel.app
               </a>
             </div>
 
-            {/* PROJECT 2 */}
             <div style={{background: 'white', padding: '25px 30px', borderRadius: '10px', boxShadow: '0 3px 10px rgba(0,0,0,0.07)', borderLeft: '4px solid #26ae60'}}>
               <h3 style={{fontSize: '1.15rem', color: '#2f3542', margin: '0 0 8px 0', fontWeight: 'bold'}}>🔹 Gateway Digital Surveys System</h3>
               <p style={{color: '#57606f', margin: '0 0 10px 0', fontSize: '0.95rem'}}>Automated data collection & reporting platform — secure, scalable, used by thousands of users.</p>
-              <a 
-                href="https://gateway-digital-surveys.vercel.app" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                style={{color: '#26ae60', fontWeight: '600', textDecoration: 'none', fontSize: '0.9rem'}}
-              >
+              <a href="https://gateway-digital-surveys.vercel.app" target="_blank" rel="noopener noreferrer" style={{color: '#26ae60', fontWeight: '600', textDecoration: 'none', fontSize: '0.9rem'}}>
                 https://gateway-digital-surveys.vercel.app
               </a>
             </div>
 
-            {/* PROJECT 3 */}
             <div style={{background: 'white', padding: '25px 30px', borderRadius: '10px', boxShadow: '0 3px 10px rgba(0,0,0,0.07)', borderLeft: '4px solid #26ae60'}}>
               <h3 style={{fontSize: '1.15rem', color: '#2f3542', margin: '0 0 8px 0', fontWeight: 'bold'}}>🔹 Professor Learning Platform</h3>
               <p style={{color: '#57606f', margin: '0 0 10px 0', fontSize: '0.95rem'}}>Education & content management system — built for performance, easy to manage and scale.</p>
-              <a 
-                href="https://professor-lake.vercel.app" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                style={{color: '#26ae60', fontWeight: '600', textDecoration: 'none', fontSize: '0.9rem'}}
-              >
+              <a href="https://professor-lake.vercel.app" target="_blank" rel="noopener noreferrer" style={{color: '#26ae60', fontWeight: '600', textDecoration: 'none', fontSize: '0.9rem'}}>
                 https://professor-lake.vercel.app
               </a>
             </div>
 
-            {/* PROJECT 4 */}
             <div style={{background: 'white', padding: '25px 30px', borderRadius: '10px', boxShadow: '0 3px 10px rgba(0,0,0,0.07)', borderLeft: '4px solid #26ae60'}}>
               <h3 style={{fontSize: '1.15rem', color: '#2f3542', margin: '0 0 8px 0', fontWeight: 'bold'}}>🔹 Next.js Modern Web App</h3>
               <p style={{color: '#57606f', margin: '0 0 10px 0', fontSize: '0.95rem'}}>High‑speed, SEO‑friendly React/Next.js application — modern, fast, and optimized.</p>
-              <a 
-                href="https://nextjs-ashy-iota-85.vercel.app" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                style={{color: '#26ae60', fontWeight: '600', textDecoration: 'none', fontSize: '0.9rem'}}
-              >
+              <a href="https://nextjs-ashy-iota-85.vercel.app" target="_blank" rel="noopener noreferrer" style={{color: '#26ae60', fontWeight: '600', textDecoration: 'none', fontSize: '0.9rem'}}>
                 https://nextjs-ashy-iota-85.vercel.app
               </a>
             </div>
 
           </div>
 
-          {/* CERTIFICATION BOX */}
           <div style={{maxWidth: '700px', margin: '40px auto 0 auto', background: '#eaf4ff', border: '1px solid #bdd7f5', padding: '20px', borderRadius: '8px', textAlign: 'center'}}>
             <p style={{fontSize: '1rem', color: '#0a3d62', margin: '0 0 8px 0', fontWeight: '600'}}>
               🎓 Certification: Higher Diploma IT — <strong style={{color: '#26ae60', fontSize: '1.1rem'}}>DISTINCTION</strong>
@@ -129,7 +104,6 @@ export default function HomePage() {
       </section>
 
 
-      {/* CTA SECTION */}
       <section style={{background: 'linear-gradient(135deg, #f0f7ff 0%, #e0edff 100%)', padding: '60px 20px', textAlign: 'center'}}>
         <div style={{maxWidth: '700px', margin: '0 auto'}}>
           <h2 style={{fontSize: '1.8rem', color: '#0a3d62', margin: '0 0 15px 0', fontWeight: 'bold'}}>Ready to Build Your Dream Project?</h2>
