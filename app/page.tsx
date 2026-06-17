@@ -49,7 +49,7 @@ export default function HomePage() {
       </section>
 
 
-      {/* PORTFOLIO SECTION — 100% ERROR FREE */}
+      {/* PORTFOLIO SECTION — 100% DEPLOYABLE */}
       <section style={{backgroundColor: '#f8fbfd', padding: '60px 20px'}}>
         <div style={{maxWidth: '1200px', margin: '0 auto'}}>
           <h2 style={{textAlign: 'center', fontSize: '2rem', color: '#0a3d62', marginBottom: '50px', fontWeight: 'bold'}}>
