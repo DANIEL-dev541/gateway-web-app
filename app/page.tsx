@@ -1,174 +1,150 @@
-"use client";
+'use client';
+import Link from 'next/link';
 
-import { useEffect } from "react";
-
-export default function AboutPage() {
-  useEffect(() => {
-    // Animation ready
-  }, []);
-
+export default function HomePage() {
   return (
-    <div style={{background: '#F8F9FC', minHeight: '100vh', padding: '4rem 2rem'}}>
-      <div className="container" style={{maxWidth: '1200px', margin: '0 auto'}}>
-
-        <div style={{textAlign: 'center', marginBottom: '4rem', animation: 'fadeIn 1s ease'}}>
-          <h1 style={{fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 800, color: '#0A2463', marginBottom: '1rem'}}>
-            About Gateway Web & App Development
-          </h1>
-          <p style={{fontSize: '1.125rem', color: '#64748b', maxWidth: '700px', margin: '0 auto'}}>
-            Professional Full-Stack Developer | Certified IT Expert | Based in Nairobi, Kenya
-          </p>
-        </div>
-
-
-        <div 
-          style={{
-            display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', 
-            gap: '3rem', 
-            alignItems: 'center', 
-            background: 'white', 
-            borderRadius: '16px', 
-            padding: '2rem', 
-            boxShadow: '0 8px 32px rgba(10, 36, 99, 0.1)',
-            animation: 'floatUp 4s ease-in-out infinite alternate'
-          }}
+    <div style={{margin: 0, padding: 0, fontFamily: 'Arial, sans-serif', backgroundColor: '#ffffff', color: '#222222', lineHeight: '1.6'}}>
+      
+      {/* HERO SECTION */}
+      <header style={{background: 'linear-gradient(135deg, #f0f7ff 0%, #e0edff 100%)', padding: '60px 20px', textAlign: 'center'}}>
+        <h1 style={{fontSize: 'clamp(2.2rem, 4vw, 3.5rem)', color: '#0a3d62', margin: '0 0 15px 0', fontWeight: 'bold'}}>
+          Gateway Web & App Development
+        </h1>
+        <p style={{fontSize: '1.1rem', color: '#3c6382', maxWidth: '700px', margin: '0 auto 30px auto'}}>
+          Full‑Stack Experts | Premium Websites & Mobile Apps | Nairobi, Kenya
+        </p>
+        <Link 
+          href="/contact" 
+          style={{backgroundColor: '#0a3d62', color: 'white', padding: '12px 30px', borderRadius: '6px', textDecoration: 'none', fontWeight: '600', fontSize: '1rem'}}
         >
+          Start Your Project
+        </Link>
+      </header>
+
+
+      {/* SERVICES SECTION */}
+      <section style={{padding: '60px 20px', maxWidth: '1200px', margin: '0 auto'}}>
+        <h2 style={{textAlign: 'center', fontSize: '2rem', color: '#0a3d62', marginBottom: '50px', fontWeight: 'bold'}}>What We Offer</h2>
+        <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px'}}>
           
-          <div style={{position: 'relative', animation: 'gentleRock 5s ease-in-out infinite'}}>
-            <div style={{position: 'absolute', inset: '-8px', background: 'linear-gradient(135deg, #0A2463, #3E92CC, #E9B824)', borderRadius: '12px', filter: 'blur(12px)', opacity: 0.4}}></div>
-            <img 
-              src="/profile.png" 
-              alt="Daniel - Full Stack Developer"
-              style={{
-                position: 'relative',
-                width: '100%',
-                height: 'auto',
-                borderRadius: '8px',
-                border: '6px solid white',
-                display: 'block'
-              }}
-            />
+          <div style={{background: '#ffffff', padding: '30px', borderRadius: '10px', boxShadow: '0 4px 12px rgba(0,0,0,0.08)', border: '1px solid #e8f0f8'}}>
+            <div style={{fontSize: '35px', marginBottom: '15px'}}>🌐</div>
+            <h3 style={{fontSize: '1.3rem', color: '#0a3d62', margin: '0 0 10px 0', fontWeight: 'bold'}}>Web Development</h3>
+            <p style={{color: '#57606f', margin: 0}}>Fast, modern & mobile‑friendly websites & systems tailored for your business growth, optimized for speed and SEO.</p>
           </div>
 
-
-          <div style={{color: '#1E1E2F'}}>
-            <h2 style={{fontSize: '1.8rem', fontWeight: 700, marginBottom: '1rem', color: '#0A2463'}}>
-              Hi, I'm Daniel — Your Trusted Tech Partner
-            </h2>
-
-            <p style={{fontSize: '1rem', lineHeight: '1.7', marginBottom: '1.5rem', color: '#475569'}}>
-              I am a fully qualified IT professional holding a <strong style={{color: '#0A2463'}}>Higher Diploma in Information Technology</strong> from Tindiret Technical & Vocational College. With years of hands-on experience, I specialize in building high-performance, secure and scalable digital solutions.
-            </p>
-
-            <p style={{fontSize: '1rem', lineHeight: '1.7', marginBottom: '2rem', color: '#475569'}}>
-              I don't just write code — I build solutions that grow your business. From simple websites to complex enterprise systems and mobile apps, I handle every layer: <strong>Frontend, Backend, Databases, Security & Hosting</strong>.
-            </p>
-
-
-            <div 
-              style={{
-                background: 'rgba(10, 36, 99, 0.08)', 
-                padding: '1rem 1.5rem', 
-                borderRadius: '8px', 
-                borderLeft: '4px solid #E9B824', 
-                marginBottom: '2rem',
-                animation: 'pulseBorder 2s ease-in-out infinite alternate'
-              }}
-            >
-              <p style={{fontWeight: 600, color: '#0A2463', margin: 0}}>🎓 Certified Higher Diploma IT Professional</p>
-              <p style={{fontSize: '0.875rem', color: '#475569', margin: '0.25rem 0 0 0'}}>Proven academic & practical expertise — international standards</p>
-            </div>
-
-
-            <div style={{display: 'flex', gap: '1rem', flexWrap: 'wrap'}}>
-              <a href="/contact" style={{background: '#0A2463', color: 'white', padding: '0.875rem 2rem', borderRadius: '8px', textDecoration: 'none', fontWeight: 600, transition: 'all 0.3s'}} onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'} onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}>
-                Start Your Project
-              </a>
-              <a href="/services" style={{background: '#E9B824', color: '#1E1E2F', padding: '0.875rem 2rem', borderRadius: '8px', textDecoration: 'none', fontWeight: 600, transition: 'all 0.3s'}} onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'} onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}>
-                View Services
-              </a>
-            </div>
+          <div style={{background: '#ffffff', padding: '30px', borderRadius: '10px', boxShadow: '0 4px 12px rgba(0,0,0,0.08)', border: '1px solid #e8f0f8'}}>
+            <div style={{fontSize: '35px', marginBottom: '15px'}}>📱</div>
+            <h3 style={{fontSize: '1.3rem', color: '#0a3d62', margin: '0 0 10px 0', fontWeight: 'bold'}}>Mobile Apps</h3>
+            <p style={{color: '#57606f', margin: 0}}>Cross‑platform Android & iOS applications — scalable, secure, and user‑friendly, built with Flutter & React Native.</p>
           </div>
+
+          <div style={{background: '#ffffff', padding: '30px', borderRadius: '10px', boxShadow: '0 4px 12px rgba(0,0,0,0.08)', border: '1px solid #e8f0f8'}}>
+            <div style={{fontSize: '35px', marginBottom: '15px'}}>⚙️</div>
+            <h3 style={{fontSize: '1.3rem', color: '#0a3d62', margin: '0 0 10px 0', fontWeight: 'bold'}}>Custom Systems</h3>
+            <p style={{color: '#57606f', margin: 0}}>Databases, APIs & full business automation to streamline your operations, manage data and improve efficiency.</p>
+          </div>
+
         </div>
+      </section>
 
 
-        <div style={{marginTop: '5rem'}}>
-          <div style={{textAlign: 'center', marginBottom: '3rem'}}>
-            <h2 style={{fontSize: '1.8rem', fontWeight: 700, color: '#0A2463'}}>My Full Stack Skills & Technologies</h2>
-            <p style={{color: '#64748b'}}>Mastered every tool needed to build powerful solutions</p>
-          </div>
+      {/* PORTFOLIO SECTION — 100% ERROR FREE */}
+      <section style={{backgroundColor: '#f8fbfd', padding: '60px 20px'}}>
+        <div style={{maxWidth: '1200px', margin: '0 auto'}}>
+          <h2 style={{textAlign: 'center', fontSize: '2rem', color: '#0a3d62', marginBottom: '50px', fontWeight: 'bold'}}>
+            📂 My Live Projects & Portfolio
+          </h2>
 
-
-          <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '1.25rem'}}>
+          <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(500px, 1fr))', gap: '25px'}}>
             
-            {[
-              {name: 'React.js', icon: '⚛️'},
-              {name: 'Next.js', icon: '▲'},
-              {name: 'Flutter', icon: '📱'},
-              {name: 'Node.js', icon: '🟢'},
-              {name: 'PHP', icon: '🐘'},
-              {name: 'Python', icon: '🐍'},
-              {name: 'SQL / MySQL', icon: '🗄️'},
-              {name: 'MongoDB', icon: '🍃'},
-              {name: 'HTML5 / CSS3', icon: '🎨'},
-              {name: 'JavaScript / TS', icon: '📜'},
-              {name: 'REST APIs', icon: '🔌'},
-              {name: 'Git / GitHub', icon: '🐙'},
-              {name: 'UI/UX Design', icon: '✨'},
-              {name: 'Cloud / Hosting', icon: '☁️'},
-              {name: 'Cybersecurity', icon: '🔒'}
-            ].map((skill, i) => (
-              <div 
-                key={i} 
-                style={{
-                  background: 'white', 
-                  padding: '1.25rem', 
-                  borderRadius: '8px', 
-                  boxShadow: '0 4px 12px rgba(0,0,0,0.05)', 
-                  textAlign: 'center',
-                  animation: 'bounceSkill 5s ease-in-out ' + (i * 0.15) + 's infinite',
-                  transition: 'all 0.3s'
-                }}
-                onMouseOver={(e) => {e.currentTarget.style.transform = 'translateY(-6px)'; e.currentTarget.style.boxShadow = '0 8px 20px rgba(10, 36, 99, 0.12)'}}
-                onMouseOut={(e) => {e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.05)'}}
+            {/* PROJECT 1 */}
+            <div style={{background: 'white', padding: '25px 30px', borderRadius: '10px', boxShadow: '0 3px 10px rgba(0,0,0,0.07)', borderLeft: '4px solid #26ae60'}}>
+              <h3 style={{fontSize: '1.15rem', color: '#2f3542', margin: '0 0 8px 0', fontWeight: 'bold'}}>🔹 Gateway Web App — Main Platform</h3>
+              <p style={{color: '#57606f', margin: '0 0 10px 0', fontSize: '0.95rem'}}>Custom full‑stack business solution, responsive & secure, built for performance and scalability.</p>
+              <a 
+                href="https://gateway-web-app-chi.vercel.app" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                style={{color: '#26ae60', fontWeight: '600', textDecoration: 'none', fontSize: '0.9rem'}}
               >
-                <div style={{fontSize: '2rem', marginBottom: '0.5rem'}}>{skill.icon}</div>
-                <div style={{fontWeight: 600, color: '#1E1E2F'}}>{skill.name}</div>
-              </div>
-            ))}
+                https://gateway-web-app-chi.vercel.app
+              </a>
+            </div>
+
+            {/* PROJECT 2 */}
+            <div style={{background: 'white', padding: '25px 30px', borderRadius: '10px', boxShadow: '0 3px 10px rgba(0,0,0,0.07)', borderLeft: '4px solid #26ae60'}}>
+              <h3 style={{fontSize: '1.15rem', color: '#2f3542', margin: '0 0 8px 0', fontWeight: 'bold'}}>🔹 Gateway Digital Surveys System</h3>
+              <p style={{color: '#57606f', margin: '0 0 10px 0', fontSize: '0.95rem'}}>Automated data collection & reporting platform — secure, scalable, used by thousands of users.</p>
+              <a 
+                href="https://gateway-digital-surveys.vercel.app" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                style={{color: '#26ae60', fontWeight: '600', textDecoration: 'none', fontSize: '0.9rem'}}
+              >
+                https://gateway-digital-surveys.vercel.app
+              </a>
+            </div>
+
+            {/* PROJECT 3 */}
+            <div style={{background: 'white', padding: '25px 30px', borderRadius: '10px', boxShadow: '0 3px 10px rgba(0,0,0,0.07)', borderLeft: '4px solid #26ae60'}}>
+              <h3 style={{fontSize: '1.15rem', color: '#2f3542', margin: '0 0 8px 0', fontWeight: 'bold'}}>🔹 Professor Learning Platform</h3>
+              <p style={{color: '#57606f', margin: '0 0 10px 0', fontSize: '0.95rem'}}>Education & content management system — built for performance, easy to manage and scale.</p>
+              <a 
+                href="https://professor-lake.vercel.app" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                style={{color: '#26ae60', fontWeight: '600', textDecoration: 'none', fontSize: '0.9rem'}}
+              >
+                https://professor-lake.vercel.app
+              </a>
+            </div>
+
+            {/* PROJECT 4 */}
+            <div style={{background: 'white', padding: '25px 30px', borderRadius: '10px', boxShadow: '0 3px 10px rgba(0,0,0,0.07)', borderLeft: '4px solid #26ae60'}}>
+              <h3 style={{fontSize: '1.15rem', color: '#2f3542', margin: '0 0 8px 0', fontWeight: 'bold'}}>🔹 Next.js Modern Web App</h3>
+              <p style={{color: '#57606f', margin: '0 0 10px 0', fontSize: '0.95rem'}}>High‑speed, SEO‑friendly React/Next.js application — modern, fast, and optimized.</p>
+              <a 
+                href="https://nextjs-ashy-iota-85.vercel.app" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                style={{color: '#26ae60', fontWeight: '600', textDecoration: 'none', fontSize: '0.9rem'}}
+              >
+                https://nextjs-ashy-iota-85.vercel.app
+              </a>
+            </div>
 
           </div>
+
+          {/* CERTIFICATION BOX */}
+          <div style={{maxWidth: '700px', margin: '40px auto 0 auto', background: '#eaf4ff', border: '1px solid #bdd7f5', padding: '20px', borderRadius: '8px', textAlign: 'center'}}>
+            <p style={{fontSize: '1rem', color: '#0a3d62', margin: '0 0 8px 0', fontWeight: '600'}}>
+              🎓 Certification: Higher Diploma IT — <strong style={{color: '#26ae60', fontSize: '1.1rem'}}>DISTINCTION</strong>
+            </p>
+            <p style={{fontSize: '0.9rem', color: '#3c6382', margin: 0}}>
+              ✅ Certified by CDACC • CBET Framework • TVET Authority Approved — Tindiret Technical College (2026)
+            </p>
+          </div>
         </div>
+      </section>
 
-      </div>
 
-
-      <style dangerouslySetInnerHTML={{ __html: `
-        @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(10px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes floatUp {
-          0% { transform: translateY(0); }
-          100% { transform: translateY(-6px); }
-        }
-        @keyframes gentleRock {
-          0% { transform: rotate(0deg); }
-          25% { transform: rotate(0.3deg); }
-          75% { transform: rotate(-0.3deg); }
-          100% { transform: rotate(0deg); }
-        }
-        @keyframes pulseBorder {
-          0% { border-left-color: #E9B824; }
-          100% { border-left-color: #f2c94c; }
-        }
-        @keyframes bounceSkill {
-          0% { transform: translateY(0); }
-          50% { transform: translateY(-3px); }
-          100% { transform: translateY(0); }
-        }
-      `}} />
+      {/* CTA SECTION */}
+      <section style={{background: 'linear-gradient(135deg, #f0f7ff 0%, #e0edff 100%)', padding: '60px 20px', textAlign: 'center'}}>
+        <div style={{maxWidth: '700px', margin: '0 auto'}}>
+          <h2 style={{fontSize: '1.8rem', color: '#0a3d62', margin: '0 0 15px 0', fontWeight: 'bold'}}>Ready to Build Your Dream Project?</h2>
+          <p style={{color: '#3c6382', margin: '0 0 30px 0', fontSize: '1.05rem'}}>
+            We deliver high‑quality, secure and scalable solutions — trusted by businesses across Kenya, Uganda, UK & USA.
+          </p>
+          <Link 
+            href="/contact" 
+            style={{backgroundColor: '#26ae60', color: 'white', padding: '12px 30px', borderRadius: '6px', textDecoration: 'none', fontWeight: '600', fontSize: '1rem'}}
+          >
+            Contact Me Today
+          </Link>
+          <p style={{marginTop: '20px', color: '#3c6382', fontSize: '0.95rem'}}>📧 info@gatewayweb.co.ke</p>
+        </div>
+      </section>
 
     </div>
   );
